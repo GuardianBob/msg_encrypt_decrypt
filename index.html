@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    
+    <title>Message Encrypt/Decrypt</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row text-center justify-content-center p-2" >
+            <div class="col-lg-6 col-md-8 col-sm-10 form-group ">
+                <label class="display-6" for="passphrase">Secret Passphrase: </label>
+                <input type="text" name="passphrase" id="passphrase" class="form-control fs-5 my-2" >
+                <label class="display-6" for="message">Message to encrypt / decrypt: </label>
+                <!-- <input type="text" name="decrypted" id="decrypted" class="" style="padding: 5px;font-size:large;"> <br> -->
+                <textarea name="message" id="message" rows="5" class="form-control fs-5 my-2" ></textarea>
+                <div class="row justify-content-between">
+                    <div class="col-sm-6 my-1">
+                        <button class="btn btn-lg btn-primary  form-control" onclick="encrypt()">Encrypt</button>
+                    </div>
+                    <div class="col-sm-6 my-1">
+                        <button class="btn btn-lg btn-danger  form-control" onclick="decrypt()">Decrypt</button>
+                    </div>
+                </div>
+                <div id="results" class="mt-2" style="display:none;">
+                    <label class="display-6" id="res_label" for="res_message"></label>            
+                    <textarea name="res_message" id="res_message" class="form-control my-2 bg-dark text-white fs-5" readonly></textarea>
+                    <a href="" id="res_email" class="btn btn-lg btn-primary form-control my-2" target="_blank ">Send in Email</a>
+                    <button id="res_link" onclick=copyURL() class="btn btn-lg btn-info text-white form-control my-2">Copy Link</button>
+                    <button id="res_text" onclick=copyText() class="btn btn-lg btn-secondary form-control my-2">Copy Text</button>
+                </div>            
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="./index.js"></script>
+</footer>
+</html>
