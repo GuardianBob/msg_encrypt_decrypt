@@ -82,7 +82,6 @@ function copyURL() {
     copyURL.select();
     copyURL.setSelectionRange(0, 99999); /* For mobile devices */
     var newLink = "https://jesse-encrypt.netlify.com/index.html?msg=" + copyURL.value
-    // var newLink = "file:///D:/Programming/HTML/encryptor/index.html?msg=" + copyURL.value
     navigator.clipboard.writeText(newLink);
     /* Alert the copied URL */
     // alert("Copied the Link: " + newLink);
