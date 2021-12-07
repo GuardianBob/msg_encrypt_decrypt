@@ -34,24 +34,27 @@ function decrypt() {
     document.getElementById("res_link").style.display = "none";
     document.getElementById("res_email").style.display = "none";
     decrypted(message, passphrase);
-    // setEmail();
 }
 
 function encrypt() {
     var message = document.getElementById("message").value;
-    var passphrase = document.getElementById("passphrase").value;            
-    document.getElementById("results").style.display = "";
-    document.getElementById("res_label").innerHTML = "Encrypted Message:"
-    document.getElementById("res_text").innerHTML = "Copy Encrypted Text"
-    document.getElementById("res_link").innerHTML = "Copy Encrypted Link"
-    // document.getElementById("res_link").classList.remove('invisible');
-    // document.getElementById("res_email").classList.remove('invisible');
-    document.getElementById("results").style.display = "";
-    document.getElementById("res_link").style.display = "";
-    document.getElementById("res_email").style.display = "";
-    // console.log(message, passphrase);
-    encrypted(message, passphrase);
-    setEmail();
+    var passphrase = document.getElementById("passphrase").value;
+    if(passphrase == ''){
+        alert("Please enter a passphrase");
+    } else{
+        
+        document.getElementById("res_label").innerHTML = "Encrypted Message:"
+        document.getElementById("res_text").innerHTML = "Copy Encrypted Text"
+        document.getElementById("res_link").innerHTML = "Copy Encrypted Link"
+        // document.getElementById("res_link").classList.remove('invisible');
+        // document.getElementById("res_email").classList.remove('invisible');
+        document.getElementById("results").style.display = "";
+        document.getElementById("res_link").style.display = "";
+        document.getElementById("res_email").style.display = "";
+        // console.log(message, passphrase);
+        encrypted(message, passphrase);
+        setEmail();
+    };
 }
 
 function setEmail() {
